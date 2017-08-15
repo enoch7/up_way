@@ -180,7 +180,6 @@ func main() {
 
 	fmt.Println(&mys)
 	*/
-
 	mdd := mystr{name:"jack",last:"uncle"}
 	fmt.Println(mdd.cov())
 
