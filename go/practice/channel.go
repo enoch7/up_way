@@ -41,5 +41,17 @@ func main() {
 	<-c3
 	<-c3
 
+	requests := make(chan int ,5)
+	for i := 0; i < 5; i++ {
+		requests <- i
+	}
+	close(requests)
+	limiter := time.Tick(time.Millisecond * 200)
+	for res := range requests {
+		<- limiter
+		fmt.Println("request ",res,time.Now())
+	}
+
+
 
 }
