@@ -66,6 +66,13 @@ type mystr struct{
 	last string
 }
 
+func complicate() (add int,multi int) {
+	add = 1
+	multi = 3
+	return
+	
+}
+
 
 
 func (m *mystr) cov() string {
@@ -190,6 +197,9 @@ func main() {
 			fmt.Println(err)
 		}
 	}
+
+	aa, bb := complicate()
+	fmt.Println(aa,bb)
 
 
 
